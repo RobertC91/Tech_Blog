@@ -1,0 +1,9 @@
+{{#each blogs as |blog|}}
+  <div class="card" style="width: 100%; background-color: #dae1e7">
+    <div class="card-body">
+      <h5 class="card-title">{{blog.title}}</h5>
+      <p class="card-text">{{blog.content}}</p>
+      <a href="/api/blogs/{{hid}}" class="btn btn-dark">Go To Blog</a>
+    </div>
+  </div>
+{{/each}}

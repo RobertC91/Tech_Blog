@@ -11,3 +11,17 @@ header, h1 {
     padding: 10px;
     color: white !important;
 }
+
+.card {
+    border: none;
+    padding: 1
+}
+
+form, input {
+    margin: .75rem;
+    padding: .25rem;
+}
+
+form, button {
+    margin-top: .5rem;
+}
