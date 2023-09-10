@@ -1,0 +1,32 @@
+[
+    {
+        "body": "I'm fascinated by the potential of quantum computing! It's amazing how qubits can exist in multiple states, opening up a whole new world of possibilities.",
+        "blogId": 1,
+        "userId": 1
+    },
+    {
+        "body": "AI's impact on healthcare is truly transformative. The idea of AI-powered diagnostics and personalized treatments is promising, but we must also address ethical concerns to ensure patient privacy and safety.",
+        "blogId": 2,
+        "userId": 2
+    },
+    {
+        "body": "Excited about the 5G revolution! The prospect of seamless connectivity and its applications in various sectors is mind-boggling. Can't wait to see how it shapes the future.",
+        "blogId": 3,
+        "userId": 3
+    },
+    {
+        "body": "Smart home tech has come so far! It's incredible to think about how our homes are becoming more intelligent and responsive to our needs. But, of course, we need to be mindful of data security as well.",
+        "blogId": 4,
+        "userId": 4
+    },
+    {
+        "body": "I'm curious about the practical applications of quantum computing. Are there any specific examples of problems it can solve that classical computers can't?",
+        "blogId": 1,
+        "userId": 2
+    },
+    {
+        "body": "5G's low latency and high speeds could revolutionize industries like gaming and AR/VR experiences. The future is exciting, but I hope we can build the infrastructure needed to fully harness its potential.",
+        "blogId": 3,
+        "userId": 3
+    }
+]

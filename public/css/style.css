@@ -1,0 +1,13 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none !important;
+    list-style-type: none;
+}
+
+header, h1 {
+    background-color: #355C7D;
+    padding: 10px;
+    color: white !important;
+}

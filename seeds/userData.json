@@ -1,0 +1,19 @@
+[
+    {
+        "name": "john_doe123",
+        "password": "SecurePass#1"
+    },
+    {
+        "name": "emma_smith89",
+        "password": "P@sswOrd123"
+    },
+    {
+        "name": "david_jackson22",
+        "password": "StrongPwd$567"
+    },
+    {
+        "name": "sarah_brown47",
+        "password": "SafePassword*9"
+    }
+
+]
