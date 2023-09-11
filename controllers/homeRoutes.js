@@ -3,6 +3,7 @@ const router = express.Router();
 const { User, Blog, Comment } = require("../models");
 const withAuth = require("../utils/auth");
 
+
 // Get route for homepage
 router.get("/", async (req, res) => {
   try {
@@ -26,35 +27,35 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/:id", async (req, res) => {
+router.get("/blogs/:id", async (req, res) => {
   try {
-    const oneBlog = await Blog.findByPk(req.params.id, {
-      include: [
+    const blogData = await Blog.findByPk(req.params.id, {
+      include: [User, 
         {
-          model: User,
-          attributes: ["name"],
+          model: Comment,
+          include: [User],
         },
       ],
     });
 
-    const blog = oneBlog.get({ plain: true });
+    const blog = blogData.get({ plain: true });
 
     res.render("blog", {
       ...blog,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
-    res.status(400).json(err);
+    res.status(500).json(err);
   }
 });
 
 // Get route for Comments
-router.get("/comments", (req, res) => {
+router.get('/comments', (req, res) => {
   if (req.session.user) {
-    return res.redirect("/");
+    return res.redirect('/')
   }
-  res.render("comments");
-});
+  res.render('comments')
+})
 
 // Get route for dashboard
 router.get("/dashboard", withAuth, (req, res) => {
@@ -77,8 +78,8 @@ router.get("/signup", (req, res) => {
   res.render("signup");
 });
 
-router.get("*",(req,res)=>{
-  res.redirect("/")
-})
+
+
+
 
 module.exports = router;
