@@ -3,7 +3,8 @@
     <div class="card-body">
       <h5 class="card-title">{{blog.title}}</h5>
       <p class="card-text">{{blog.content}}</p>
-      <a href="/api/blogs/{{hid}}" class="btn btn-dark">Go To Blog</a>
+      <p class="card-text">{{dateFormat createdAt "MMM DD, YYYY"}}</p>
+      <a href="/api/blogs/{{blog.id}}" class="btn btn-dark">Go To Blog</a>
     </div>
   </div>
 {{/each}}

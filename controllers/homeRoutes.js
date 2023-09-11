@@ -26,26 +26,34 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/blogs/:id", async (req, res) => {
+router.get("/:id", async (req, res) => {
   try {
-    const blogData = await Blog.findByPk(req.params.id, {
-      include: [User, 
+    const oneBlog = await Blog.findByPk(req.params.id, {
+      include: [
         {
-          model: Comment,
-          include: [User],
+          model: User,
+          attributes: ["name"],
         },
       ],
     });
 
-    const blog = blogData.get({ plain: true });
+    const blog = oneBlog.get({ plain: true });
 
     res.render("blog", {
       ...blog,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
-    res.status(500).json(err);
+    res.status(400).json(err);
   }
+});
+
+// Get route for Comments
+router.get("/comments", (req, res) => {
+  if (req.session.user) {
+    return res.redirect("/");
+  }
+  res.render("comments");
 });
 
 // Get route for dashboard
@@ -69,6 +77,8 @@ router.get("/signup", (req, res) => {
   res.render("signup");
 });
 
-
+router.get("*",(req,res)=>{
+  res.redirect("/")
+})
 
 module.exports = router;

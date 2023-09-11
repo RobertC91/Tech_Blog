@@ -1,0 +1,8 @@
+<a class="card" style="width: 100%; background-color: #dae1e7;">
+  <div href="/api/blogs/{{hid}}" class="card-body">
+    <h3 class="card-title">{{title}}</h3>
+    <p class="card-text">{{content}}</p>
+    <h4>Posted by: {{user.name}} on {{dateFormat createdAt "MMM DD, YYYY"}}</h4>
+    <a href="/comments" class="btn btn-dark">Write a Comment</a>
+  </div>
+</a>
