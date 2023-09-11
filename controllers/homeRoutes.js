@@ -56,6 +56,14 @@ router.get('/comments', (req, res) => {
   res.render('comments')
 })
 
+// Get route for updateDelete
+router.get("/updateDelete", withAuth, (req, res) => {
+  if (req.session.user) {
+    return res.redirect("/login");
+  }
+  res.render("updateDelete");
+});
+
 // Get route for dashboard
 router.get("/dashboard", withAuth, (req, res) => {
   if (req.session.user) {
